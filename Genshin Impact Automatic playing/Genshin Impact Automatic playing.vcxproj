@@ -140,6 +140,9 @@
   <ItemGroup>
     <Image Include="..\..\..\..\My files\downloads\mc7ofkoi12mvx4nf1temxgu7aph18gj.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="update.py" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
