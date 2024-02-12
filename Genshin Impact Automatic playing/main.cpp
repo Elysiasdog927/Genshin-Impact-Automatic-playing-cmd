@@ -1,6 +1,6 @@
 #include"base.h"
 using namespace std;
-#define gap 100
+#define gap 125
 int main() 
 {
     char c;//定义字符变量
@@ -27,7 +27,7 @@ int main()
     while (getline(aft, s))//getline(inf,s)是逐行读取inf中的文件信息
     {
         con = 0;//字符序号归零
-        Sleep(gap);//两拍间隔
+        Sleep(gap);
         while (true)//循环分割字符判断
         {
             c = s[con];//将字符串拆为字符
@@ -37,7 +37,7 @@ int main()
             }
             else if (c == '0')//当前字符为0，多间隔一次
             {
-                Sleep(gap);//两拍间隔
+                Sleep(25);//两拍间隔
             }
             else if (c == '(')//当前字符为（，循环读取括号内内容
             {
@@ -59,7 +59,7 @@ int main()
                 press(key_num);//按键盘
             }
             con++;//字符序号++
-            Sleep(gap);//两拍间隔
+            Sleep(gap);
         }
     }
     cout << "演奏结束";
