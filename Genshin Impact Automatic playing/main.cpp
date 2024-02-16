@@ -1,8 +1,8 @@
 #include"base.h"
 using namespace std;
-#define gap 125
 int main() 
 {
+    int gap = 125;//定义间隔
     char c;//定义字符变量
     string s, ss[100], file_name = "Data\\";//定义字符串变量
     int num = 0,cle = 0,u_i,con;//定义整型变量
@@ -21,7 +21,9 @@ int main()
     cout << "输入序号来选择要演奏的曲目：";
     cin >> u_i;//获取用户输入
     file_name.append(ss[u_i]);//拼接字符串，组成带路径文件名
-    cout << "你选择了：" << file_name<<",演奏将在20s后开始，请做好准备";
+    cout << "你选择了：" << ss[u_i]<<"。请设定演奏速度（10—1000，数字越小越快，默认125）：";
+    cin >> gap;//获取用户输入
+    cout << "演奏将在20s后开始，做好准备。\n";
     Sleep(20000);//停留20s
     aft.open(file_name);//打开文件
     while (getline(aft, s))//getline(inf,s)是逐行读取inf中的文件信息
