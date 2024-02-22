@@ -2,7 +2,7 @@
 using namespace std;
 int main() 
 {
-    int gap = 125;//定义间隔
+    int gap = 125,con_num;//定义间隔与用户输入变量
     char c;//定义字符变量
     string s, ss[100], file_name = "Data\\";//定义字符串变量
     int num = 0,cle = 0,u_i,con;//定义整型变量
@@ -18,8 +18,13 @@ int main()
         cle++;//读取行数++
     }
     inf.close();//关闭文件
-    cout << "输入序号来选择要演奏的曲目：";
+start://开始位置
+    cout << "输入序号来选择要演奏的曲目：(输入0退出程序)";
     cin >> u_i;//获取用户输入
+    if (u_i == 0)//判断用户输入
+    {
+        goto end;//跳转到结束
+    }
     file_name.append(ss[u_i]);//拼接字符串，组成带路径文件名
     cout << "你选择了：" << ss[u_i]<<"。请设定演奏速度（10—1000，数字越小越快，默认125）：";
     cin >> gap;//获取用户输入
@@ -64,7 +69,15 @@ int main()
             Sleep(gap);
         }
     }
-    cout << "演奏结束";
+    cout << "当前曲目演奏完毕,输入1重新开始";
     aft.close();//关闭文件
+    cin >> con_num;//获取用户输入
+    if(con_num == 1)//判断用户输入
+    {
+        system("cls");//清屏函数
+        goto start;//返回开始位置
+    }
+end:
+    cout << "程序运行结束。";
     return 0;//返回0
 }
