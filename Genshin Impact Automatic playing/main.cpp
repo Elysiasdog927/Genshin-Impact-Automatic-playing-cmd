@@ -9,6 +9,7 @@ int main()
     ifstream inf,aft;//打开文件相关内容
     inf.open("Data.txt");//打开文件
     //打开输出文件
+start://开始位置
     while (getline(inf, s))//getline(inf,s)是逐行读取inf中的文件信息
     {
         if(cle!=0)//计数，读取到第几行（文件第一行不要）
@@ -18,7 +19,6 @@ int main()
         cle++;//读取行数++
     }
     inf.close();//关闭文件
-start://开始位置
     cout << "输入序号来选择要演奏的曲目：(输入0退出程序)";
     cin >> u_i;//获取用户输入
     if (u_i == 0)//判断用户输入
