@@ -6,9 +6,9 @@ int main()
     char c;//定义字符变量
     string s, ss[100], file_name = "Data\\";//定义字符串变量
     int num = 0,cle = 0,u_i,con;//定义整型变量
+start://开始位置
     ifstream inf,aft;//打开文件相关内容
     inf.open("Data.txt");//打开文件
-start://开始位置
     //打开输出文件
     while (getline(inf, s))//getline(inf,s)是逐行读取inf中的文件信息
     {
