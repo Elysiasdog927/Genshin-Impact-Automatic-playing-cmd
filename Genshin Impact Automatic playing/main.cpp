@@ -8,8 +8,8 @@ int main()
     int num = 0,cle = 0,u_i,con;//定义整型变量
     ifstream inf,aft;//打开文件相关内容
     inf.open("Data.txt");//打开文件
-    //打开输出文件
 start://开始位置
+    //打开输出文件
     while (getline(inf, s))//getline(inf,s)是逐行读取inf中的文件信息
     {
         if(cle!=0)//计数，读取到第几行（文件第一行不要）
